@@ -97,7 +97,7 @@ module KNUST_MIPS_VERIFY_tb;
         continue;
       end
 
-      // Apply on rising edge (like your VHDL)
+      // Apply on rising edge
       @(posedge clk);
 
       // Small 1ns application delay to mimic "after 1 ns"
@@ -121,7 +121,7 @@ module KNUST_MIPS_VERIFY_tb;
 
     $fclose(fd);
 
-    // Summary (mirrors your VHDL 'severity failure' termination)
+    // Summary 
     if (errors == 0) begin
       $display("No Errors -- %0d tests completed successfully.", vectornum);
       $fatal(0); // end sim (similar effect to severity failure)
